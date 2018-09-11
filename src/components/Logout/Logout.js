@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Route, Link, Switch} from 'react-router-dom'
 
 class Logout extends Component {
   render () {
@@ -7,7 +8,7 @@ class Logout extends Component {
         <h2>Log Out</h2>
         <form>
           <div>
-            <input type='submit' value='Log Out' onClick={this.props.handleLogout} />
+            <Link to='/signup'><input type='submit' value='Log Out' onClick={this.props.handleLogout} /></Link>
           </div>
         </form>
       </div>

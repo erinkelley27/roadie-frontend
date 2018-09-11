@@ -8,6 +8,8 @@ import Home from '../Home/Home'
 import Signup from '../Signup/Signup'
 import Login from '../Login/Login'
 import Logout from '../Logout/Logout'
+import RecsAll from '../RecsAll/RecsAll'
+import RecShow from '../RecShow/RecShow'
 
 class App extends Component {
   constructor () {
@@ -21,7 +23,8 @@ class App extends Component {
       recsVisited: 0,
       email: '',
       password: '',
-      isLoggedIn: false
+      isLoggedIn: false,
+      recData: []
     }
     this.handleInput = this.handleInput.bind(this)
     this.handleSignup = this.handleSignup.bind(this)
@@ -39,6 +42,19 @@ class App extends Component {
         isLoggedIn: false
       })
     }
+  }
+
+  componentWillMount () {
+    axios.get('http://localhost:3001/roadierecs')
+      .then(res => {
+        console.log(res.data)
+        this.setState({
+          recData: res.data
+        })
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   handleLogout () {
@@ -128,6 +144,22 @@ class App extends Component {
                   <Login isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogin={this.handleLogin} />
                 )
               }}
+            />
+
+            <Route
+              exact
+              path='/roadierecs'
+              render={routerProps => (
+                <RecsAll {...routerProps} {...this.state} />
+              )}
+            />
+            
+            <Route
+              exact
+              path='/roadierecs/:name'
+              render={routerProps => (
+                <RecShow {...routerProps} {...this.state} />
+              )}
             />
           </Switch>
         </div>

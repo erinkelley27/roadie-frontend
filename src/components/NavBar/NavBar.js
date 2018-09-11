@@ -11,7 +11,7 @@ class NavBar extends Component {
               <Link to='/user/:id'>My Profile</Link>
             </li>
             <li>
-              <Link to='/recs'>Roadie Recs</Link>
+              <Link to='/roadierecs'>Roadie Recs</Link>
             </li>
             <li>
               <Link to='/logout'>Log Out</Link>

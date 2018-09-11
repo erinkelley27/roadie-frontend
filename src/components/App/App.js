@@ -90,7 +90,7 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='header'>
-          <h1>Roadie</h1>
+          <h1><a href='/'>Roadie</a></h1>
           <NavBar isLoggedIn={this.state.isLoggedIn} />
         </div>
         <div className='body'>
@@ -105,7 +105,7 @@ class App extends Component {
               path='/signup'
               render={(props) => {
                 return (
-                  <Signup isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
+                  <Signup isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignup={this.handleSignup} />
                 )
               }}
             />
@@ -119,7 +119,7 @@ class App extends Component {
                 )
               }}
             />
-            
+
             <Route
               exact
               path='/login'

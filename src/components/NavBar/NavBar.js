@@ -3,18 +3,25 @@ import { Route, Link, Switch } from 'react-router-dom'
 
 class NavBar extends Component {
   render () {
-    return (
-      <div className='NavBar'>
-        <ul>
-          <li>
-            <Link to='/user/:id'>My Profile</Link>
-          </li>
-          <li>
-            <Link to='/recs'>Roadie Recs</Link>
-          </li>
-        </ul>
-      </div>
-    )
+    if (this.props.isLoggedIn) {
+      return (
+        <div className='NavBar'>
+          <ul>
+            <li>
+              <Link to='/user/:id'>My Profile</Link>
+            </li>
+            <li>
+              <Link to='/recs'>Roadie Recs</Link>
+            </li>
+            <li>
+              <Link to='/logout'>Log Out</Link>
+            </li>
+          </ul>
+        </div>
+      )
+    } else {
+      return null
+    }
   }
 }
 

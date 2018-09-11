@@ -37,7 +37,7 @@ class Signup extends Component {
           </div>
 
           <div>
-            <input type='submit' value='Submit' onClick={this.props.handeSignup} />
+            <input type='submit' value='Submit' onClick={this.props.handleSignup} />
           </div>
 
           <div>

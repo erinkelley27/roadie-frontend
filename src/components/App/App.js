@@ -10,7 +10,7 @@ import Login from '../Login/Login'
 import Logout from '../Logout/Logout'
 import RecsAll from '../RecsAll/RecsAll'
 import RecShow from '../RecShow/RecShow'
-// import Map from '../Map/Map'
+import Map from '../Map/Map'
 // import User from '../User/User'
 
 class App extends Component {

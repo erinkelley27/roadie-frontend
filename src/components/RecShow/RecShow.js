@@ -12,7 +12,7 @@ class RecShow extends Component {
         <p>{rec.website}</p>
         <p>{rec.phone}</p>
         <div className='RecMap'>
-          <Map />
+          <Map lat={rec.lat} lng={rec.lng} />
         </div>
       </div>
     )

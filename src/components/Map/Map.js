@@ -2,13 +2,22 @@ import React, { Component } from 'react'
 import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
 
 class Map extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      lat: this.props.lat,
+      lng: this.props.lng
+    }
+  }
+
   render () {
     const RecMap = withGoogleMap(props => (
-      <GoogleMap defaultCenter={{ lat: 40.756795, lng: -73.954298 }} defaultZoom={13}>
-        {props.isMarkerShown && <Marker position={{ lat: 40.756795, lng: -73.954298 }} />}
+      <GoogleMap
+        defaultCenter={{ lat: this.props.lat, lng: this.props.lng }} defaultZoom={13}
+      >
+        {props.isMarkerShown && <Marker position={{ lat: this.props.lat, lng: this.props.lng }} />}
       </GoogleMap>
-    )
-    )
+    ))
     return (
       <div className='Map'>
         <RecMap

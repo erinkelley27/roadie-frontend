@@ -10,6 +10,8 @@ import Login from '../Login/Login'
 import Logout from '../Logout/Logout'
 import RecsAll from '../RecsAll/RecsAll'
 import RecShow from '../RecShow/RecShow'
+// import Map from '../Map/Map'
+// import User from '../User/User'
 
 class App extends Component {
   constructor () {
@@ -24,24 +26,13 @@ class App extends Component {
       email: '',
       password: '',
       isLoggedIn: false,
-      recData: []
+      recData: [],
+      userData: []
     }
     this.handleInput = this.handleInput.bind(this)
     this.handleSignup = this.handleSignup.bind(this)
     this.handleLogin = this.handleLogin.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
-  }
-
-  componentDidMount () {
-    if (localStorage.token) {
-      this.setState({
-        isLoggedIn: true
-      })
-    } else {
-      this.setState({
-        isLoggedIn: false
-      })
-    }
   }
 
   componentWillMount () {
@@ -55,6 +46,18 @@ class App extends Component {
       .catch(err => {
         console.log(err)
       })
+  }
+
+  componentDidMount () {
+    if (localStorage.token) {
+      this.setState({
+        isLoggedIn: true
+      })
+    } else {
+      this.setState({
+        isLoggedIn: false
+      })
+    }
   }
 
   handleLogout () {
@@ -153,7 +156,7 @@ class App extends Component {
                 <RecsAll {...routerProps} {...this.state} />
               )}
             />
-            
+
             <Route
               exact
               path='/roadierecs/:name'
@@ -161,6 +164,14 @@ class App extends Component {
                 <RecShow {...routerProps} {...this.state} />
               )}
             />
+
+            {/* <Route
+              exact
+              path='/user/:id'
+              render={routerProps => (
+                <RecShow {...routerProps} {...this.state} />
+              )}
+            /> */}
           </Switch>
         </div>
       </div>

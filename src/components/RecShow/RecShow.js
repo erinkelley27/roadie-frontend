@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Map from '../Map/Map'
 
 class RecShow extends Component {
   render () {
@@ -10,6 +11,9 @@ class RecShow extends Component {
         <p>{rec.city}, {rec.state} {rec.zip}</p>
         <p>{rec.website}</p>
         <p>{rec.phone}</p>
+        <div className='RecMap'>
+          <Map />
+        </div>
       </div>
     )
   }

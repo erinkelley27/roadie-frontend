@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import {Route, Link, Switch} from 'react-router-dom'
 
-// Import list of all recs based on state here
-
 class RecsAll extends Component {
   render () {
     let recList = this.props.recData.map(item => {

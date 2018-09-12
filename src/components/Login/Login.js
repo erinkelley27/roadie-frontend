@@ -5,8 +5,11 @@ class Login extends Component {
   render () {
     return (
       <div className='Login'>
-        <h2>Log In</h2>
         <form>
+          <div>
+            <h2>Log In</h2>
+          </div>
+
           <div>
             <label htmlFor='email'>Email</label>
             <input type='text' name='email' onChange={this.props.handleInput} />
@@ -18,11 +21,11 @@ class Login extends Component {
           </div>
 
           <div>
-            <Link to='/home'><input type='submit' value='Submit' onClick={this.props.handleLogin} /></Link>
+            <Link to='/home'><input type='submit' value='Submit' className='submit' onClick={this.props.handleLogin} /></Link>
           </div>
 
           <div>
-            <p>Not a Roadie yet? <a href='/signup'>Sign Up</a></p>
+            <p>Not a Roadie yet? <a href='/signup' className='auth-form-link'>Sign Up</a></p>
           </div>
         </form>
       </div>

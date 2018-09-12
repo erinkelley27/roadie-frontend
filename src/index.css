@@ -1,5 +1,130 @@
+/* CSS for body, header and nav */
 body {
+  background: #E0E7E4;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.header img {
+  height: 150px;
+}
+
+.header h1 {
+  font-family: 'Fugaz One', cursive;
+  font-size: 72px;
+  text-align: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav {
+  border: solid #D24951;
+  background: #D24951;
+}
+
+ul {
+  /* border: solid blue 2px; */
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+
+li {
+  padding: 0px 35px 0px 35px;
+}
+
+.nav-link {
+  /* font-family: 'Baloo Bhaina', cursive; */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CSS for forms */
+form {
+  margin: 25px 35% 25px 35%;
+  border: solid #3380cc 2px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-header {
+  font-weight: bold;
+}
+
+input {
+  margin: 15px;
+}
+
+.submit {
+  padding: 15px 25px 15px 25px;
+  background: #D24951;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
+.auth-form-link {
+  color: #3380cc;
+}
+
+/* CSS for RecAll */
+.RecsAll {
+  margin: 25px 5% 25px 5%;
+  border: solid #557fa8 2px;
+  background: white;
+}
+
+h3 {
+  padding: 0px 25px 0px 45px;
+  font-family: 'Fugaz One', cursive;
+  font-size: 48px;
+  /* color: #D24951; */
+}
+
+.recList {
+  /* border: solid yellow 2px; */
+  /* width: 800px; */
+  margin: 0px 0px 25px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.recLink {
+  margin: 10px;
+  border: solid #D24951 2px;
+  padding: 10px;
+  width: 350px;
+}
+
+.recName {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  /* border: solid black 2px; */
+  padding: 0px 5px 0px 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #557fa8;
+}
+
+.recLocation {
+  margin: 0;
+  /* border: solid black 2px; */
+  padding: 0px 5px 0px 5px;
 }

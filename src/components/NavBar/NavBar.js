@@ -8,13 +8,13 @@ class NavBar extends Component {
         <div className='NavBar'>
           <ul>
             <li>
-              <Link to='/user/:id'>My Profile</Link>
+              <Link to='/user/:id' className='nav-link'>My Profile</Link>
             </li>
             <li>
-              <Link to='/roadierecs'>Roadie Recs</Link>
+              <Link to='/roadierecs' className='nav-link'>Roadie Recs</Link>
             </li>
             <li>
-              <Link to='/logout'>Log Out</Link>
+              <Link to='/logout' className='nav-link'>Log Out</Link>
             </li>
           </ul>
         </div>

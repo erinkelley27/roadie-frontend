@@ -10,7 +10,6 @@ import Login from '../Login/Login'
 import Logout from '../Logout/Logout'
 import RecsAll from '../RecsAll/RecsAll'
 import RecShow from '../RecShow/RecShow'
-import Map from '../Map/Map'
 // import User from '../User/User'
 
 class App extends Component {
@@ -109,7 +108,10 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='header'>
+          <img src='https://media.giphy.com/media/2rpDGeo2ymlXO/giphy.gif' alt='Roadie' />
           <h1><a href='/'>Roadie</a></h1>
+        </div>
+        <div className='nav'>
           <NavBar isLoggedIn={this.state.isLoggedIn} />
         </div>
         <div className='body'>

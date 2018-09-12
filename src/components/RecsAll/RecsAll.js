@@ -6,15 +6,17 @@ class RecsAll extends Component {
     let recList = this.props.recData.map(item => {
       return (
         <div className='recLink' key={item.name}>
-          <h4><Link to={'/roadierecs/' + item.name}>{item.name}</Link></h4>
-          <p>{item.city}, {item.state}</p>
+          <Link to={'/roadierecs/' + item.name}>
+            <p className='recName'>{item.name}</p>
+            <p className='recLocation'>{item.city}, {item.state}</p>
+          </Link>
         </div>
       )
     })
     return (
       <div className='RecsAll'>
         <div>
-          <h3>I'm pass through...</h3>
+          <h3>Plan Your Road Trip</h3>
         </div>
         <div className='recList'>
           {recList}

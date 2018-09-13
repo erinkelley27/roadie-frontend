@@ -19,8 +19,12 @@ class RecShow extends Component {
             <div className='recContact'>
               <p className='contact'>{rec.address}</p>
               <p className='contact'>{rec.city}, {rec.state} {rec.zip}</p>
-              <a href={rec.website} className='recSite'><p className='contact'>Web Site</p></a>
               <p className='contact'>{rec.phone}</p>
+              <a href={rec.website} className='recSite'><p className='contact'>Web Site</p></a>
+            </div>
+
+            <div className='get-directions'>
+              <a href='https://www.google.com/maps' target='_blank' className='directions-button'>Get Directions</a>
             </div>
           </div>
 

@@ -100,6 +100,7 @@ class App extends Component {
       .then(response => {
         localStorage.token = response.data.token
         this.setState({ isLoggedIn: true })
+        
       })
       .catch(err => console.log(err))
   }

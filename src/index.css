@@ -49,6 +49,22 @@ li {
   font-weight: bold;
 }
 
+/* CSS for Home */
+/* @keyframes home-text {
+  from {color: white;}
+  to {color: #3380cc;}
+} */
+
+.Home h1 {
+  margin: 100px 0px 25px 0px;
+  font-family: 'Fugaz One', cursive;
+  font-size: 85px;
+  text-align: center;
+  color: #3380cc;
+  /* animation-name: home-text;
+  animation-duration: 4s; */
+}
+
 /* CSS for forms */
 form {
   margin: 25px 35% 25px 35%;
@@ -161,7 +177,7 @@ h3 {
 }
 
 .menu-item {
-  margin: 0px 0px 5px 0px;
+  margin: 0px 0px 10px 0px;
   font-size: 24px;
   font-weight: bold;
   color: #557fa8;
@@ -186,4 +202,20 @@ h3 {
 
 .recSite {
   color: #D24951;
+}
+
+.get-directions {
+  margin: 25px;
+  align-self: center;
+}
+
+.directions-button {
+  padding: 15px 25px 15px 25px;
+  background: #D24951;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  /* align-self: center; */
 }

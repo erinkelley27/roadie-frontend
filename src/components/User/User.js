@@ -2,24 +2,24 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 class User extends Component {
-//   constructor () {
-//     super()
-//     this.state = {
-//       userData: []
-//     }
-//   }
-//   componentWillMount () {
-//     axios.get('http://localhost:3001/user')
-//       .then(res => {
-//         console.log(res.data)
-//         this.setState({
-//           userData: res.data
-//         })
-//       })
-//       .catch(err => {
-//         console.log(err)
-//       })
-//   }
+  // constructor () {
+  //   super()
+  //   this.state = {
+  //     userData: []
+  //   }
+  // }
+  // componentWillMount () {
+  //   axios.get('http://localhost:3001/user')
+  //     .then(res => {
+  //       console.log(res.data)
+  //       this.setState({
+  //         userData: res.data
+  //       })
+  //     })
+  //     .catch(err => {
+  //       console.log(err)
+  //     })
+  // }
   render () {
 
     return (

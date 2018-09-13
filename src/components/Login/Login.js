@@ -17,11 +17,11 @@ class Login extends Component {
 
           <div>
             <label htmlFor='password'>Password</label>
-            <input type='text' name='password' onChange={this.props.handleInput} />
+            <input type='password' name='password' onChange={this.props.handleInput} />
           </div>
 
           <div>
-            <Link to='/home'><input type='submit' value='Submit' className='submit' onClick={this.props.handleLogin} /></Link>
+            <input type='submit' value='Submit' className='submit' onClick={this.props.handleLogin} />
           </div>
 
           <div>

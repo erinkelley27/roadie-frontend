@@ -4,8 +4,7 @@ class Home extends Component {
   render () {
     return (
       <div className='Home'>
-        <h2>Home</h2>
-        <p>Road trip photo slideshow?</p>
+        <h1 class-name='home-text'>Make Your Road Trip Dine-amic</h1>
       </div>
     )
   }

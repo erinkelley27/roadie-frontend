@@ -166,11 +166,10 @@ h3 {
 }
 
 .recImage {
-  margin: 25px;
+  margin: 25px auto;
   height: 400px;
   width: 500px;
   border: solid #D24951 3px;
-  /* padding: 2px 2px 2px 2px; */
   display: flex;
   justify-content: center;
   align-items: center;

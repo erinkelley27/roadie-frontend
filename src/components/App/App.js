@@ -118,7 +118,7 @@ class App extends Component {
         <div className='body'>
           <Switch>
             <Route
-              path='/home'
+              path='/'
               component={Home}
             />
 

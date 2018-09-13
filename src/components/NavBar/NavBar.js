@@ -20,7 +20,18 @@ class NavBar extends Component {
         </div>
       )
     } else {
-      return null
+      return (
+        <div className='NavBar'>
+          <ul>
+            <li>
+              <Link to='/signup' className='nav-link'>Sign Up</Link>
+            </li>
+            <li>
+              <Link to='/login' className='nav-link'>Log In</Link>
+            </li>
+          </ul>
+        </div>
+      )
     }
   }
 }

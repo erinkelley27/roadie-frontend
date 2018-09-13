@@ -13,14 +13,14 @@ class RecShow extends Component {
         <div className='columns'>
           <div className='column1'>
             <div className='recImage'>
-              <img src={rec.image} />
+              <img src={rec.image} className='rec-img' />
             </div>
 
             <div className='recContact'>
               <p className='contact'>{rec.address}</p>
               <p className='contact'>{rec.city}, {rec.state} {rec.zip}</p>
               <p className='contact'>{rec.phone}</p>
-              <a href={rec.website} className='recSite'><p className='contact'>Web Site</p></a>
+              <a href={rec.website} target='_blank' className='recSite'><p className='contact'>Web Site</p></a>
             </div>
 
             <div className='get-directions'>

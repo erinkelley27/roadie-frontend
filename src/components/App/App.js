@@ -172,7 +172,7 @@ class App extends Component {
               exact
               path='/user/:id'
               render={routerProps => (
-                <RecShow {...routerProps} {...this.state} />
+                <User {...routerProps} {...this.state} />
               )}
             /> */}
           </Switch>

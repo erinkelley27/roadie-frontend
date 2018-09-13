@@ -168,14 +168,21 @@ h3 {
 .recImage {
   margin: 25px;
   height: 400px;
-  border: solid #D24951 2px;
+  width: 500px;
+  border: solid #D24951 3px;
+  /* padding: 2px 2px 2px 2px; */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rec-img {
+  border: solid white 2px;
   flex-shrink: 1;
-  max-width: 100%;
-  max-height: 100%;
+  max-height: 400px;
+  max-width: auto;
+
 }
 
 .recDetails {

@@ -6,13 +6,36 @@ class RecShow extends Component {
     let rec = this.props.recData.find((rec) => rec.name === this.props.match.params.name)
     return (
       <div className='RecShow'>
-        <h4>{rec.name}</h4>
-        <p>{rec.address}</p>
-        <p>{rec.city}, {rec.state} {rec.zip}</p>
-        <p>{rec.website}</p>
-        <p>{rec.phone}</p>
-        <div className='RecMap'>
-          <Map lat={rec.lat} lng={rec.lng} />
+        <div className='recTitle'>
+          <h3>{rec.name}</h3>
+        </div>
+
+        <div className='columns'>
+          <div className='column1'>
+            <div className='recImage'>
+              <img src={rec.image} />
+            </div>
+
+            <div className='recContact'>
+              <p className='contact'>{rec.address}</p>
+              <p className='contact'>{rec.city}, {rec.state} {rec.zip}</p>
+              <a href={rec.website} className='recSite'><p className='contact'>Web Site</p></a>
+              <p className='contact'>{rec.phone}</p>
+            </div>
+          </div>
+
+          <div className='column2'>
+            <div className='recDetails'>
+              <p className='menu-item'>Don't leave without trying the {rec.menuItem}!</p>
+              <p className='booleans'>Parking: {rec.parking}</p>
+              <p className='booleans'>Kid-Friendly: {rec.kids}</p>
+              <p className='booleans'>Dog-Friendly: {rec.dogs}</p>
+            </div>
+
+            <div className='RecMap'>
+              <Map lat={rec.lat} lng={rec.lng} />
+            </div>
+          </div>
         </div>
       </div>
     )

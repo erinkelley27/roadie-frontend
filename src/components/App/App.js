@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   componentWillMount () {
-    axios.get('http://localhost:3001/roadierecs')
+    axios.get('https://roadie-recs.herokuapp.com/roadierecs')
       .then(res => {
         console.log(res.data)
         this.setState({
@@ -80,7 +80,7 @@ class App extends Component {
 
   handleSignup (e) {
     e.preventDefault()
-    axios.post('http://localhost:3001/user/signup', {
+    axios.post('https://roadie-recs.herokuapp.com/user/signup', {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       city: this.state.city,
@@ -97,7 +97,7 @@ class App extends Component {
 
   handleLogin (e) {
     e.preventDefault()
-    axios.post('http://localhost:3001/user/login', {
+    axios.post('https://roadie-recs.herokuapp.com/user/login', {
       email: this.state.email,
       password: this.state.password
     })

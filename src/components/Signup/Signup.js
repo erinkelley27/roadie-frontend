@@ -41,7 +41,7 @@ class Signup extends Component {
           </div>
 
           <div>
-            <Link to='/home'><input type='submit' value='Submit' className='submit' onClick={this.props.handleSignup} /></Link>
+            <Link to='/'><input type='submit' value='Submit' className='submit' onClick={this.props.handleSignup} /></Link>
           </div>
 
           <div>

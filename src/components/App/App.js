@@ -10,7 +10,7 @@ import Login from '../Login/Login'
 import Logout from '../Logout/Logout'
 import RecsAll from '../RecsAll/RecsAll'
 import RecShow from '../RecShow/RecShow'
-// import User from '../User/User'
+import User from '../User/User'
 
 class App extends Component {
   constructor () {
@@ -26,7 +26,7 @@ class App extends Component {
       password: '',
       isLoggedIn: false,
       recData: [],
-      userData: []
+      user_id: ''
     }
     this.handleInput = this.handleInput.bind(this)
     this.handleSignup = this.handleSignup.bind(this)
@@ -48,13 +48,17 @@ class App extends Component {
   }
 
   componentDidMount () {
+    console.log(localStorage)
+    console.log(localStorage.user_id)
     if (localStorage.token) {
       this.setState({
-        isLoggedIn: true
+        isLoggedIn: true,
+        user_id: localStorage.user_id
       })
     } else {
       this.setState({
-        isLoggedIn: false
+        isLoggedIn: false,
+        user_id: ''
       })
     }
   }
@@ -100,7 +104,6 @@ class App extends Component {
       .then(response => {
         localStorage.token = response.data.token
         this.setState({ isLoggedIn: true })
-        
       })
       .catch(err => console.log(err))
   }
@@ -113,7 +116,7 @@ class App extends Component {
           <h1><a href='/'>Roadie</a></h1>
         </div>
         <div className='nav'>
-          <NavBar isLoggedIn={this.state.isLoggedIn} />
+          <NavBar isLoggedIn={this.state.isLoggedIn} user_id={this.state.user_id} />
         </div>
         <div className='body'>
           <Switch>
@@ -169,13 +172,13 @@ class App extends Component {
               )}
             />
 
-            {/* <Route
+            <Route
               exact
-              path='/user/:id'
+              path={`/user/${this.state.user_id}`}
               render={routerProps => (
                 <User {...routerProps} {...this.state} />
               )}
-            /> */}
+            />
           </Switch>
         </div>
       </div>

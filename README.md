@@ -22,6 +22,8 @@ Roadie is a full stack application that allows users to locate diners, food join
 * Axios
 * Google Maps
 
+The backend repo can be accessed [here](https://github.com/erinkelley27/roadie-backend).
+
 ## Installation
 
 1. Clone or downlaod this repo

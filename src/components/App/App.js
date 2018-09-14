@@ -48,8 +48,6 @@ class App extends Component {
   }
 
   componentDidMount () {
-    console.log(localStorage)
-    console.log(localStorage.user_id)
     if (localStorage.token) {
       this.setState({
         isLoggedIn: true,
@@ -174,7 +172,7 @@ class App extends Component {
 
             <Route
               exact
-              path={`/user/${this.state.user_id}`}
+              path={'/user/' + localStorage.user_id}
               render={routerProps => (
                 <User {...routerProps} {...this.state} />
               )}

@@ -48,6 +48,8 @@ class App extends Component {
   }
 
   componentDidMount () {
+    console.log(localStorage.token)
+    console.log(localStorage.user_id)
     if (localStorage.token) {
       this.setState({
         isLoggedIn: true,
@@ -88,7 +90,8 @@ class App extends Component {
     })
       .then(response => {
         localStorage.token = response.data.token
-        this.setState({ isLoggedIn: true })
+        localStorage.user_id = response.data.user_id
+        this.setState({ isLoggedIn: true, user_id: response.data.user_id })
       })
       .catch(err => console.log(err))
   }
@@ -101,7 +104,8 @@ class App extends Component {
     })
       .then(response => {
         localStorage.token = response.data.token
-        this.setState({ isLoggedIn: true })
+        localStorage.user_id = response.data.user_id
+        this.setState({ isLoggedIn: true, user_id: response.data.user_id })
       })
       .catch(err => console.log(err))
   }
@@ -172,7 +176,7 @@ class App extends Component {
 
             <Route
               exact
-              path={'/user/' + localStorage.user_id}
+              path={'/user/' + this.state.user_id}
               render={routerProps => (
                 <User {...routerProps} {...this.state} />
               )}

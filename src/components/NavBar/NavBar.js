@@ -8,7 +8,7 @@ class NavBar extends Component {
         <div className='NavBar'>
           <ul>
             <li>
-              <Link to={'/user/' + localStorage.user_id} className='nav-link'>My Profile</Link>
+              <Link to={'/user/' + this.props.user_id} className='nav-link'>My Profile</Link>
             </li>
             <li>
               <Link to='/roadierecs' className='nav-link'>Roadie Recs</Link>

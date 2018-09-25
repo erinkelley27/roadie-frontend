@@ -232,3 +232,9 @@ h3 {
   text-align: center;
   /* align-self: center; */
 }
+
+.User {
+  margin: 25px 5% 25px 5%;
+  border: solid #557fa8 2px;
+  background: white;
+}

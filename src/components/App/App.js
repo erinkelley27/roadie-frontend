@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   componentWillMount () {
-    axios.get('http://localhost:3000/roadierecs')
+    axios.get('http://localhost:3001/roadierecs')
       .then(res => {
         console.log(res.data)
         this.setState({
@@ -80,7 +80,7 @@ class App extends Component {
 
   handleSignup (e) {
     e.preventDefault()
-    axios.post('http://localhost3000/user/signup', {
+    axios.post('http://localhost:3001/user/signup', {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       city: this.state.city,
@@ -107,7 +107,7 @@ class App extends Component {
 
   handleLogin (e) {
     e.preventDefault()
-    axios.post('http://localhost3000/user/login', {
+    axios.post('http://localhost:3001/user/login', {
       email: this.state.email,
       password: this.state.password
     })

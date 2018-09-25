@@ -91,7 +91,16 @@ class App extends Component {
       .then(response => {
         localStorage.token = response.data.token
         localStorage.user_id = response.data.user_id
-        this.setState({ isLoggedIn: true, user_id: response.data.user_id })
+        this.setState({
+          firstName: response.data.firstName,
+          // lastName: '',
+          // image: '',
+          // city: '',
+          // state: '',
+          // recsVisited: 0,
+          isLoggedIn: true,
+          user_id: response.data.user_id
+        })
       })
       .catch(err => console.log(err))
   }
@@ -105,7 +114,10 @@ class App extends Component {
       .then(response => {
         localStorage.token = response.data.token
         localStorage.user_id = response.data.user_id
-        this.setState({ isLoggedIn: true, user_id: response.data.user_id })
+        this.setState({
+          isLoggedIn: true,
+          user_id: response.data.user_id
+        })
       })
       .catch(err => console.log(err))
   }

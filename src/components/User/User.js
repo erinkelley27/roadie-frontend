@@ -8,10 +8,9 @@ class User extends Component {
     }
   }
   render () {
-
     return (
       <div className='User'>
-        <h2>{this.props.firstname}</h2>
+        <h2>{this.props.user_id}</h2>
       </div>
     )
   }

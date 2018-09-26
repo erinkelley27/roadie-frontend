@@ -235,6 +235,7 @@ h3 {
 
 .User {
   margin: 25px 5% 25px 5%;
+  padding: 10px;
   border: solid #557fa8 2px;
   background: white;
 }

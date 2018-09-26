@@ -41,6 +41,7 @@ class App extends Component {
         this.setState({
           recData: res.data
         })
+        console.log(this.state.recData)
       })
       .catch(err => {
         console.log(err)
@@ -92,12 +93,6 @@ class App extends Component {
         localStorage.token = response.data.token
         localStorage.user_id = response.data.user_id
         this.setState({
-          firstName: response.data.firstName,
-          // lastName: '',
-          // image: '',
-          // city: '',
-          // state: '',
-          // recsVisited: 0,
           isLoggedIn: true,
           user_id: response.data.user_id
         })

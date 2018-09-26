@@ -10,7 +10,7 @@ class User extends Component {
   }
 
   componentDidMount () {
-    axios.get('http://localhost:3001/user')
+    axios.get('https://roadie-recs.herokuapp.com/user')
       .then(res => {
         console.log(res.data)
         console.log(this.props.user_id)
@@ -25,15 +25,10 @@ class User extends Component {
   }
 
   render () {
-    let user = this.state.userData.find((user) => user._id === this.props.match.params.id)
+    // let user = this.state.userData.find((user) => user._id === this.props.match.params.id)
     return (
       <div className='User'>
-<<<<<<< HEAD
         <h2>Welcome, User!</h2>
-=======
-        <h2>My Profile</h2>
-        <h2>{user.firstName}</h2>
->>>>>>> local
       </div>
     )
   }

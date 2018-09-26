@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class User extends Component {
   constructor (props) {
@@ -7,10 +8,32 @@ class User extends Component {
       userData: []
     }
   }
+
+  componentDidMount () {
+    axios.get('http://localhost:3001/user')
+      .then(res => {
+        console.log(res.data)
+        console.log(this.props.user_id)
+        this.setState({
+          userData: res.data
+        })
+        console.log(this.state.userData)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
   render () {
+    let user = this.state.userData.find((user) => user._id === this.props.match.params.id)
     return (
       <div className='User'>
+<<<<<<< HEAD
         <h2>Welcome, User!</h2>
+=======
+        <h2>My Profile</h2>
+        <h2>{user.firstName}</h2>
+>>>>>>> local
       </div>
     )
   }
